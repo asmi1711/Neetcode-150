@@ -1,0 +1,11 @@
+#Python code for Contains Duplicate Problem
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        n=len(nums)
+        s=nums
+        sett=set(nums)
+        setlen=len(sett)
+        if setlen==n:
+            return False
+        else:
+            return True
