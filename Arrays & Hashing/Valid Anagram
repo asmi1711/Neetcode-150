@@ -1,0 +1,12 @@
+#LEETCODE 242
+#Python solution for Valid Anagram
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        str=list(s)
+        trr=list(t)
+        str.sort()
+        trr.sort()
+        if str==trr:
+            return True
+        else:
+            return False
