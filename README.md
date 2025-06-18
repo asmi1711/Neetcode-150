@@ -24,16 +24,4 @@ The NeetCode 150 is a set of 150 hand-picked LeetCode problems that cover the mo
 
 ---
 
-## 📂 Repository Structure
 
-```bash
-.
-├── README.md
-├── progress.json         # Optional JSON file to store problem completion
-├── solutions/            # All problem solutions by category
-│   ├── arrays_hashing/
-│   ├── two_pointers/
-│   ├── sliding_window/
-│   ├── ...
-│   └── trees/
-└── tracker.md            # Markdown tracker (checkbox list by category)
