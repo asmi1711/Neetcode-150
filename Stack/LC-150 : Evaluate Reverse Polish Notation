@@ -1,0 +1,23 @@
+#LEETCODE 150
+Python Solution to Solving Postfix Expressions
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        oper=["+","-","*","/"]
+        stack=[]
+        for ch in tokens:
+            if ch not in oper:
+                stack.append(int(ch))
+            else:
+                op2=stack.pop()
+                op1=stack.pop()
+                if ch=="+":
+                    result=op1+op2
+                elif ch=="-":
+                    result=op1-op2
+                elif ch=="*":
+                    result=op1*op2
+                else:
+                    result=int(op1/op2)
+                stack.append(result)
+        return stack[0]
+                
