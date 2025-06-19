@@ -1,0 +1,15 @@
+#LEETCODE 20
+Python Solution for Valid Parenthesis using Stack
+class Solution:
+    def isValid(self, s: str) -> bool:
+        #using a stack
+        st=[]
+        for ch in s:
+            if ch in "({[":
+                st.append(ch)
+            else:
+                if st and ((st[-1]=="(" and ch==")") or (st[-1]=="{" and ch=="}") or (st[-1]=="[" and ch=="]")):
+                    st.pop()
+                else:
+                    return False
+        return not st
