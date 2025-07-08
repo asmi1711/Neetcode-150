@@ -1,0 +1,15 @@
+#LEETCODE 128
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        #using a hashset
+        check=set(nums)
+        longest=0
+        for num in check:#iterate over set so as to not check duplicate values
+            if (num-1) not in check: #is used for checking if the number is either the beginning of a sequuence or in the middle of one
+                length=1 #sets length=1 if its the beginning of a sequence
+                while (num+length) in check: #checks what all consecutive numbers are present
+                    length+=1
+                longest=max(length,longest)
+        return longest
+                
+
