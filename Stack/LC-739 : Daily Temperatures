@@ -1,0 +1,15 @@
+#LEETCODE 739
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        #monotonic stack
+        n=len(temperatures)
+        ans=[0]*n
+        stk=[]
+        for i,temp in enumerate(temperatures):
+            #stack holds indices of numbers
+            while stk and temp>temperatures[stk[-1]]:
+                j=stk.pop()
+                ans[j]=i-j
+            stk.append(i)
+        return ans
+
