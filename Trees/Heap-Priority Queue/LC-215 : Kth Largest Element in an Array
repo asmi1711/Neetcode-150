@@ -1,0 +1,10 @@
+#LEETCODE 215
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        #Kth largest means use minheap
+        #how???
+        nums = [-n for n in nums]
+        heapq.heapify(nums)
+        for _ in range(k):
+            ans = heapq.heappop(nums)
+        return -ans 
